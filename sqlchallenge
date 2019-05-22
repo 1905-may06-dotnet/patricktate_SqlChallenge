@@ -1,0 +1,35 @@
+CREATE TABLE employee (
+    employee_Id int primary key NOT NULL,
+    FirstName VARCHAR(20) not null,
+    LastName VARCHAR(20) not null,
+    SSN int,
+    Dept_Id int,
+
+)
+GO
+SELECT * from employee
+
+INSERT into employee (employee_Id, FirstName, LastName, SSN, Dept_Id)
+VALUES (1, 'Tina', 'Smith', 234567891, 1), (2, 'Pushpinder', 'Kuar', 345678912, 2), (3, 'Fred','Belloat', 456789123, 2)
+GO
+
+
+
+INSERT into EmpDetails (EmpDetail_Id, employee_Id, Salary, Address1, Address2, City, State, Country)
+VALUES (1, 1, 50000, '223 Robot ln', 'apt A', 'Arlington', 'TX', 'US'), (2, 2, 75000, '45 Cult Rd', '', 'Grand Prairie', 'TX', 'US'),
+(3, 3, 125000, '321 Bill St', '', 'Dallas', 'TX', 'US')
+GO 
+SELECT * from EmpDetails
+CREATE TABLE Department (
+    Dept_Id int PRIMARY KEY not null,
+    DeptName VARCHAR(20) not null,
+    DeptLocation VARCHAR(20) not null,
+
+);
+go
+select * From Department
+GO
+INSERT into Department (Dept_Id, DeptName, DeptLocation)
+VALUES (1, 'Marketing', 'Dallas'), (2, 'Sales', 'Arlington'), (3, 'Sales', 'Arlington')
+GO
+SELECT * FROM Department
